@@ -2,7 +2,7 @@ import {
   BOOK_DETAILS_FAIL,
   BOOK_DETAILS_SUCCESS,
   BOOK_LIST_FAIL,
-  BOOK_LIST_REQUiEST,
+  BOOK_LIST_REQUIEST,
   BOOK_LIST_SUCCESS,
 } from '../constants/bookConstants';
 export const bookListReducer = (
@@ -10,7 +10,7 @@ export const bookListReducer = (
   action,
 ) => {
   switch (action.type) {
-    case BOOK_LIST_REQUiEST:
+    case BOOK_LIST_REQUIEST:
       return { loading: true };
     case BOOK_LIST_SUCCESS:
       return { loading: false, books: action.payload };
@@ -26,7 +26,7 @@ export const bookDetailsReducer = (
   action,
 ) => {
   switch (action.type) {
-    case BOOK_LIST_REQUiEST:
+    case BOOK_LIST_REQUIEST:
       return { loading: true };
     case BOOK_DETAILS_SUCCESS:
       return { loading: false, product: action.payload };

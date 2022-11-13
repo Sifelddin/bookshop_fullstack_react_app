@@ -12,7 +12,7 @@ export const listBooks = () => async (dispatch) => {
     type: BOOK_LIST_REQUIEST,
   });
   try {
-    const { data } = await Axios.get('');
+    const { data } = await Axios.get('/api/books');
     dispatch({ type: BOOK_LIST_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ type: BOOK_LIST_FAIL, payload: error.message });
