@@ -1,9 +1,14 @@
 import 'dotenv/config';
+import path from 'path';
 import express from 'express';
 import mongoose from 'mongoose';
 import userRouter from './routers/userRouter.js';
 import bodyParser from 'body-parser';
 import bookRouter from './routers/bookRouter.js';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 
